@@ -1,0 +1,41 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+  .center1 {
+    margin: auto;
+    background-color: chartreuse;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+  .center2 {
+    margin: auto;
+    margin-top: 10%;
+    background-color: yellowgreen;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+  .middle {
+    margin:auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+  }
+  .container1 {
+    height: 500px;
+    position: relative;
+    border: 3px solid green;
+  }
+  
+  .vertical-center {
+    margin-left: 65%;
+    position: absolute;
+    top: 60%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }

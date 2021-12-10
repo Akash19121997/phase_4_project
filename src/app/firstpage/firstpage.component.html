@@ -1,0 +1,134 @@
+<div class="container bg-warning">
+  <div class="jumbotron jumbotron-fluid">
+<div *ngIf="open==0">
+  <h2 style="margin-left: 40%;">General Knowledge Test</h2>
+<form #bindresult="ngForm" (ngSubmit)="onSubmit(bindresult.value)">
+  <div class="container" class="center">
+    <div class="row-inside" class="form-group">
+      <label for="cname">Enter Name:</label><input style="width: 260px;"  type="text" name="cname" [(ngModel)]="cname" class="form-control">
+    </div><br/>
+    <div class="row-inside" class="form-group">
+      Enter the Email:<input type="text" style="width: 260px;" name="email" [(ngModel)]="email" class="form-control">
+    </div></div><br/>
+    <div class="container" class="middle">
+    <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+      <div *ngIf="i==0" >
+        {{i+1}} {{qus.qusname}} 
+        <div class="form-group">
+          <input type="radio" value="DELHI" name="ans1"  [(ngModel)]="ans1">DELHI
+          <input type="radio" value="AMARAVATHI" name="ans1" [(ngModel)]="ans1">AMARAVATHI
+          <input type="radio" value="BOPAL" name="ans1"  [(ngModel)]="ans1">BOPAL
+          <input type="radio" value="CHENNAI" name="ans1"  [(ngModel)]="ans1">CHENNAI
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+      <div *ngIf="i==1" >
+        {{i+1}} {{qus.qusname}}
+        <div class="form-group">
+          <input type="radio" name="ans2" value="CROW" [(ngModel)]="ans2" >CROW
+          <input type="radio" name="ans2" value="CRANE" [(ngModel)]="ans2" >CRANE
+          <input type="radio" name="ans2" value="PEACOCK" [(ngModel)]="ans2" >PEACOCK
+          <input type="radio" name="ans2" value="SEAGULL" [(ngModel)]="ans2" >SEAGULL
+          
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+      <div *ngIf="i==2" >
+        {{i+1}} {{qus.qusname}}
+        <div class="form-group">
+          <input type="radio" name="ans3" value="YOGI ADITYA" [(ngModel)]="ans3" >YOGI ADITYA
+          <input type="radio" name="ans3" value="JAGAN" [(ngModel)]="ans3" >JAGAN
+          <input type="radio" name="ans3" value="NAVEEN PATNAIK" [(ngModel)]="ans3" >NAVEEN PATNAIK
+          <input type="radio" name="ans3" value="MAMATA" [(ngModel)]="ans3" >MAMATA 
+
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+      <div *ngIf="i==3" >
+        {{i+1}} {{qus.qusname}}
+        <div class="form-group">
+          <input type="radio" name="ans4" value="HASINA"  [(ngModel)]="ans4" >HASINA
+          <input type="radio" name="ans4" value="JOE BIDEN"  [(ngModel)]="ans4" >JOE BIDEN
+          <input type="radio" name="ans4" value="JOHNSON"  [(ngModel)]="ans4" >JOHNSON
+          <input type="radio" name="ans4" value="MODI"  [(ngModel)]="ans4" >MODI
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+      <div *ngIf="i==4" >
+        {{i+1}} {{qus.qusname}}
+        <div class="form-group">
+          <input type="radio" name="ans5" value="LION"  [(ngModel)]="ans5" >LION
+          <input type="radio" name="ans5" value="TIGER"  [(ngModel)]="ans5" >TIGER
+          <input type="radio" name="ans5" value="KANGAROO"  [(ngModel)]="ans5" >KANGAROO
+          <input type="radio" name="ans5" value="BEARS"  [(ngModel)]="ans5" >BEARS
+        </div>
+      </div>
+    </div> </div>
+    <div class="container">
+      <div class="vertical-center">
+    <button type="submit"  class="btn btn-primary">submit</button></div></div>
+  </form>
+</div>
+</div>
+</div>
+<div *ngIf="open==1" >
+  <h2 style="margin-left: 40%;">Review Page</h2>
+  <div class="container" class="center1" >
+
+  <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+    <div *ngIf="i==0" >
+      {{i+1}} {{qus.qusname}} 
+      <div class="form-group">
+        Answer-- {{ans1}}
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+    <div *ngIf="i==1" >
+      {{i+1}} {{qus.qusname}}
+      <div class="form-group">
+        Answer-- {{ans2}}
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+    <div *ngIf="i==2" >
+      {{i+1}} {{qus.qusname}} 
+      <div class="form-group">
+        Answer-- {{ans3}}
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+    <div *ngIf="i==3" >
+      {{i+1}} {{qus.qusname}}
+      <div class="form-group">
+        Answer-- {{ans4}}
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let qus of questions;let i=index" style="margin-left: 20%;">
+    <div *ngIf="i==4" >
+      {{i+1}} {{qus.qusname}}
+      <div class="form-group">
+        Answer-- {{ans5}}
+      </div>
+    </div>
+  </div> 
+
+<button (click)="reviewpagetoback()" style="margin-left: 20%;" class="btn btn-danger"> update Answers</button>
+<button (click)="submitpage()" style="margin-left: 5%;"  class="btn btn-danger">submit Answers</button>
+</div>
+</div>
+<div *ngIf="open==2" >
+  <div class="container" class="center2" >
+    <h1 style="color:gray;margin-left: 40%;">Results</h1>
+    <h3 style="color: goldenrod;margin-left: 10%;">Name: {{cname}}</h3>
+    <h3 style="color: goldenrod;margin-left: 10%;">Email: {{email}}</h3>
+  <h3 style="color: goldenrod;margin-left: 10%;">Result is: {{result}}/5</h3>
+  </div>
+</div>

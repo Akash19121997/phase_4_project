@@ -1,0 +1,22 @@
+[
+    {
+            "id":1,
+            "qusname":"What is he capital of India ?"
+    },
+    {
+        "id":2,
+        "qusname":"What is the national bird of India ?"
+    },
+    {
+        "id":3,
+        "qusname":"Who is the CM of Andra Pradesh ?"
+    },
+    {
+        "id":4,
+        "qusname":"Who is the PM of India ?"
+    },
+    {
+        "id":5,
+        "qusname":"What is the national animal of India ?"
+    }
+]
